@@ -4,7 +4,7 @@ import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex)
 
-const url = "http://localhost:8080/products";
+const url = "http://localhost:8000/products";
 const headers = { Accept: "application/json" };
 
 export default new Vuex.Store({
