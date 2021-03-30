@@ -3,16 +3,15 @@
     <div class="container">
       <div class="row">
         <Item v-for="product in products"
-        :key="product.id"
-        :item="product"/>
+              :key="product.id"
+              :item="product"/>
       </div>
     </div>
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
 
+import Item from "@/Item.vue"
 export default {
   name: 'Home',
   computed: {
@@ -21,7 +20,7 @@ export default {
     }
   },
   components: {
-
+    Item
   }
 }
 </script>
