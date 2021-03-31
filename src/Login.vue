@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div className="login">
     <h4 style="margin-top:30px;margin-bottom:30px">Logging in ...</h4>
   </div>
 </template>
@@ -20,8 +20,7 @@ export default {
 
     if (name && email && idToken && name != '' && email != '' && idToken != '') {
       this.$store.commit("login", payload);
-    }
-    else {
+    } else {
       this.$store.commit("logout");
     }
 
