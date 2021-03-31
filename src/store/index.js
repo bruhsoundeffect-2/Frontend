@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-// var url;
+var url;
 const headers = { Accept: "application/json" };
 
 export default new Vuex.Store({
@@ -51,15 +51,16 @@ export default new Vuex.Store({
     setUrls(state) {
       state.endpoints.login = process.env.VUE_APP_AUTH_URL;
       state.endpoints.products = process.env.VUE_APP_PRODUCTS_URL;
-      // url = this.state.endpoints.products;
+      url = state.endpoints.products;
       console.log(process.env);
     }
   },
   actions: { //asynchronous
     async getProducts(state) {
-      const products = await fetch('http://localhost:8000/products', { headers });
+      const products = await fetch(url, { headers });
       const prods = await products.json();
       state.commit("setProducts", prods);
+      console.log(prods);
     }
   },
   modules: {

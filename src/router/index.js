@@ -11,9 +11,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  { path: '/loginwithtoken',
-    name: 'loginwithtoken',
-    component: Login }
+  { path: '/loginwithtoken', name: 'loginwithtoken', component: Login },
 ]
 
 const router = new VueRouter({
