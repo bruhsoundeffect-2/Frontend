@@ -9,8 +9,8 @@
     </div>
   </div>
 </template>
-<script>
 
+<script>
 import Item from "@/Item.vue"
 export default {
   name: 'Home',
