@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     onLoginClicked() {
-      window.location = "http://localhost:3000/login";
+      window.location = this.$store.state.endpoints.login;
     },
     onLogoutClicked() {
       this.$store.commit("logout");
