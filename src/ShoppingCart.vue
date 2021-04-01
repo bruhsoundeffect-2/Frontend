@@ -4,7 +4,7 @@
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       ({{ numInCart }})
     </button>
-    <div id="shoppingCart" class="modal fade">
+    <div id="shoppingCart">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
