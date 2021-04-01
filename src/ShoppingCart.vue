@@ -2,7 +2,7 @@
   <div>
     <button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#shoppingCart">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      ( {{ numInCart }} )
+      ({{ numInCart }})
     </button>
     <div id="shoppingCart" class="modal fade">
       <div class="modal-dialog">
