@@ -3068,6 +3068,10 @@ input[type=button].btn-block {
   border-radius: 0.25rem;
 }
 
+.dropdown-menu a{
+  color: black;
+}
+
 .dropdown-menu-left {
   right: auto;
   left: 0;

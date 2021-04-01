@@ -11,19 +11,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#landingPage">Webshop</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="http://landing-page-ucllteam11.ocp-ucll-40cb0df2b03969eabb3fac6e80373775-0000.eu-de.containers.appdomain.cloud">Landing page</a></li>
             <li class="nav-item"><router-link to="/" tag="li" v-if="!isAuthenticated" active-class="active"><a @click="onLoginClicked" class="nav-link">Login</a>
             </router-link></li>
-            <li class="nav-item mt-4">
-              <ShoppingCart/>
-            </li>
-            <li v-if="isAuthenticated" class="li-pointer nav-item">
+            <li class="nav-item mt-4"><ShoppingCart/></li>
+            <li v-if="isAuthenticated" class="li-pointer nav-item mt-4">
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ getUserName() }}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Account Settings</a>
                   <a v-if="isPartner" @click="onRegisterClicked" class="dropdown-item" href="#">Register Product</a>
                   <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
                 </div>
