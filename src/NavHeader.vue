@@ -17,7 +17,7 @@
             <li class="nav-item mt-4"><ShoppingCart/></li>
             <li v-if="isAuthenticated" class="li-pointer nav-item mt-4">
               <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle ml-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{ getUserName() }}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
