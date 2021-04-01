@@ -20,14 +20,18 @@
             </div>
           </div>
         </li>
+        <li>
+          <ShoppingCart/>
+        </li>
       </ul>
     </div>
   </nav>
 </template>
 
 <script>
+import ShoppingCart from "@/ShoppingCart";
 export default {
-  components: { },
+  components: { ShoppingCart },
   name: 'NavHeader',
   computed: {
     userEmail() {
