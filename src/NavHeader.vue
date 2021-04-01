@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import ShoppingCart from "@/ShoppingCart";
+import ShoppingCart from '@/ShoppingCart.vue';
 export default {
   components: { ShoppingCart },
   name: 'NavHeader',
