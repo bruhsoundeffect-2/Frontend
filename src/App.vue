@@ -2,14 +2,17 @@
   <div id="app">
     <NavHeader />
     <router-view style="margin-top: 6rem !important"/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import NavHeader from "@/NavHeader.vue"
+import Footer from "@/Footer.vue"
 export default {
   components: {
-    NavHeader
+    NavHeader,
+    Footer
   },
   mounted(){
     this.$store.commit("setUrls");
