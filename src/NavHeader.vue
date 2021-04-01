@@ -5,24 +5,32 @@
       <ul class="navbar-nav mr-auto">
       </ul>
       <ul class="nav navbar-nav">
-        <router-link to="/" tag="li" v-if="!isAuthenticated" class="nav-item" active-class="active">
-          <a @click="onLoginClicked" class="nav-link">Login</a>
-        </router-link>
-        <li v-if="isAuthenticated" class="li-pointer nav-item">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ getUserName() }}
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Account Settings</a>
-              <a v-if="isPartner" @click="onRegisterClicked" class="dropdown-item" href="#">Register Product</a>
-              <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <ShoppingCart/>
-        </li>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#landingPage">Webshop</a></li>
+            <li class="nav-item"><router-link to="/" tag="li" v-if="!isAuthenticated" active-class="active"><a @click="onLoginClicked" class="nav-link">Login</a>
+            </router-link></li>
+            <li class="nav-item mt-4">
+              <ShoppingCart/>
+            </li>
+            <li v-if="isAuthenticated" class="li-pointer nav-item">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ getUserName() }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Account Settings</a>
+                  <a v-if="isPartner" @click="onRegisterClicked" class="dropdown-item" href="#">Register Product</a>
+                  <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </ul>
     </div>
   </nav>
