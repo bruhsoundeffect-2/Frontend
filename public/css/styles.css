@@ -5587,6 +5587,14 @@ a.close.disabled {
   opacity: 0.5;
 }
 
+.modal-backdrop {
+  display: none;
+}
+
+#yourModal.modal.fade.in {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .modal-header {
   display: flex;
   align-items: flex-start;

@@ -4,16 +4,13 @@
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       ({{ numInCart }})
     </button>
-    <div id="shoppingCart" class="modal">
-      <div class="modal-dialog">
+    <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="shoppingCartLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              Shopping cart
-            </h5>
-            <button class="close" data-dismiss="modal">
-              &times;
+            <h5 class="modal-title" id="shoppingCartLabel">Current order</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
@@ -35,8 +32,8 @@
             </table>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" data-dismiss="modal">Keep shopping</button>
-            <button class="btn btn-primary" @click="checkout()">Check out</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to shop</button>
+            <button type="button" class="btn btn-primary">Order</button>
           </div>
         </div>
       </div>
