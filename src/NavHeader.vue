@@ -22,7 +22,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a v-if="isPartner" @click="onRegisterClicked" class="dropdown-item" href="#">Register Product</a>
-                  <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
+                  <a @click="onLogoutClicked" class="dropdown-item" style="color: black;">Logout {{ userEmail }}</a>
                 </div>
               </div>
             </li>
